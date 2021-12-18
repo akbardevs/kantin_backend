@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "site_name": "Penatani.id",
+    "site_description": "Menumbuhkan Alam dan Tradisi. Yuk, saling berbagi informasi, tanya jawab, ataupun promosi produk di Penatani.id!",
+    "site_image": "https://penatani.id/api/image/1615860276179.jpeg"
+  },
+  "home": {
+    "home": "Beranda",
+    "show_all": "Tampilkan semua",
+    "logos_1": "Didukung oleh:",
+    "logos_2": "Dilaksanakan oleh kemitraan:",
+    "about": {
+      "about": "Tentang Program"
+    }
+  },
+  "report": {
+    "1": "Spam",
+    "2": "Mengandung pornografi",
+    "3": "SARA atau kebencian",
+    "4": "Bahasa yang tidak pantas:",
+    "5": "Lainnya"
+  },
+  "nav": {
+    "header_login": "Masuk",
+    "header_signup": "Daftar",
+    "header_back": "Kembali",
+    "home": "Beranda",
+    "sharing": "Sharing",
+    "references": "Materi Edukasi",
+    "manuals": "Panduan & Keterampilan",
+    "hotlines": "Hotline"
+  },
+  "reset": {
+    "header": "Reset",
+    "header_title": "Selesaikan pembaharuan sandi Anda",
+    "form": {
+      "title": "Reset Sandi",
+      "title_reset": "Reset Sandi",
+      "subtitle": "",
+      "email": {
+        "label": "Email",
+        "placeholder": "Email Anda"
+      },
+      "reset":"Reset",
+      "password": "Password",
+      "passwordC": "Konfirmasi Password",
+      "remember": "Ingat saya",
+      "submit": "Masuk",
+      "submitting": "Mengirim..."
+    }
+    
+  },
+  "login": {
+    "form": {
+      "title": "Masuk",
+      "title_reset": "Reset Sandi",
+      "subtitle": "",
+      "email": {
+        "label": "Email",
+        "placeholder": "Email Anda"
+      },
+      "reset":"Reset",
+      "password": "Password",
+      "remember": "Ingat saya",
+      "submit": "Masuk",
+      "submitting": "Mengirim..."
+    }
+  },
+  "editprofil": {
+    "form": {
+      "title": "Profil Edit",
+      "title_reset": "Reset Sandi",
+      "subtitle": "",
+      "name": {
+        "label": "Nama lengkap",
+        "placeholder": "Nama Anda"
+      },
+      "username": {
+        "label": "Username",
+        "placeholder": "Username Anda"
+      },
+      "age_range": {
+        "label": "Usia",
+        "placeholder": "Harap pilih"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Email Anda"
+      },
+      "phone": {
+        "label": "Nomor ponsel / WhatsApp",
+        "placeholder": "Nomor Anda"
+      },
+      "password": "Password",
+      "password_confirmation": "Konfirmasi password",
+      "accept_invite_password": "Password baru",
+      "disclaimer": {
+        "pre": "By clicking on the button, you agree to the processing of personal data and",
+        "privacy": "Privacy Policy"
+      },
+      "questionnaire": {
+        "title": "Selesaikan Pendaftaran Akun Anda",
+        "subtitle1": "Pilih jawaban yang sesuai",
+        "subtitle2": "Langkah 2: Pilih semua kondisi yang sesuai dengan group yang Anda dampingi"
+      },
+      "buttons": {
+        "proses": "Simpan",
+        "next": "Selanjutnya",
+        "previous": "Sebelumnya",
+        "submit": "Selesai",
+        "submitting": "Mengirim..."
+      }
+    },
+    "success": {
+      "signup_success": "Update berhasil",
+      "you_can_login": "Anda bisa langsung login dengan menggunakan email dan password yang baru Anda daftarkan!",
+      "accept_invite_login": "Anda dapat kembali ke halaman awal dan login menggunakan email dan password baru Anda."
+    },
+    "errors": {
+      "update_error": "Update data gagal",
+      "screen_1": "Mohon lengkapi data di atas",
+      "screen_2": "Mohon jawab semua pertanyaan",
+      "password_must_match": "Password harus sama",
+      "choose_age_range": "Harap pilih kelompok umur",
+      "choose_user_group": "Harap pilih mitra / organisasi",
+      "email_exists": "Email Anda sudah terdaftar. Harap login.",
+      "username_exists": "Username ini sudah digunakan. Harap pilih username lain."
+    }
+  },
+  "signup": {
+    "form": {
+      "title": "Daftar",
+      "box": "Saya menyetujui untuk mendaftarkan data saya ke sistem Lean On",
+      "name": {
+        "label": "Nama lengkap",
+        "placeholder": "Nama Anda"
+      },
+      "username": {
+        "label": "Username",
+        "placeholder": "Username Anda"
+      },
+      "age_range": {
+        "label": "Usia",
+        "placeholder": "Harap pilih"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Email Anda"
+      },
+      "phone": {
+        "label": "Nomor ponsel / WhatsApp",
+        "placeholder": "Nomor Anda"
+      },
+      "password": "Password",
+      "password_confirmation": "Konfirmasi password",
+      "accept_invite_password": "Password baru",
+      "disclaimer": {
+        "pre": "By clicking on the button, you agree to the processing of personal data and",
+        "privacy": "Privacy Policy"
+      },
+      "buttons": {
+        "signup": "Daftar",
+        "next": "Selanjutnya",
+        "previous": "Sebelumnya",
+        "submit": "Selesai",
+        "submitting": "Mengirim..."
+      }
+    },
+    "success": {
+      "signup_success": "Pendaftaran berhasil",
+      "you_can_login": "Anda bisa langsung login dengan menggunakan email dan password yang baru Anda daftarkan!",
+      "accept_invite_login": "Anda dapat kembali ke halaman awal dan login menggunakan email dan password baru Anda."
+    },
+    "errors": {
+      "signup_error": "Pendaftaran gagal",
+      "screen_1": "Mohon lengkapi data di atas",
+      "screen_2": "Mohon jawab semua pertanyaan",
+      "password_must_match": "Password harus sama",
+      "choose_age_range": "Harap pilih kelompok umur",
+      "choose_user_group": "Harap pilih mitra / organisasi",
+      "email_exists": "Email Anda sudah terdaftar. Harap login.",
+      "username_exists": "Username ini sudah digunakan. Harap pilih username lain."
+    }
+  },
+  "dummy":{
+
+  }
+}
