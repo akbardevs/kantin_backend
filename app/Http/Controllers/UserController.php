@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+
   public function testingaja(Request $request)
   {
+    return 1;
     $data_param = [
 
       "external_id"=>"ovo-testing ".mt_rand(100000, 999999),
@@ -46,6 +48,7 @@ try {
 }
 return 1;
   }
+
   //
   public function showIndex()
   {
