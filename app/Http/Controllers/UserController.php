@@ -17,7 +17,7 @@ class UserController extends Controller
 
   public function testingaja(Request $request)
   {
-    return $request;
+
     $data_param = [
 
       "external_id"=>"ovo-testing ".mt_rand(100000, 999999),
