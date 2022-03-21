@@ -43,7 +43,7 @@ try {
 
 } catch (Exception $e) {
   Log::alert($e);
-  return $e
+  return $e;
 
 }
 return 1;
