@@ -39,7 +39,7 @@ class ProductController extends Controller
     public function pay(Request $request)
     {
         Log::info($request);
-        try {
+        // try {
             Transaction::create([
                 'list_produk' => $request['list_produk'],
                 'nama' => $request['nama'],
@@ -51,13 +51,40 @@ class ProductController extends Controller
             $kantin = Kasirs::find($request['id_kasir']);
             $kantin['saldo'] = $kantin['saldo'] + $request['total'];
             $kantin->save();
-            $client = new \GuzzleHttp\Client();
-            $res = $client->get('https://pntol.securitychatboot.xyz/etoll/newPayment2.php?metode=' . $request['metode'] . '&nohp=' . $request['nohp'] . '&total=' . $request['total']);
-            Log::info($res->getBody());
-        } catch (Exception $e) {
-            Log::info('errpr');
-            Log::info($e);
-        }
+            $data_param = [
+
+                    "external_id"=>"ovo-testing".mt_rand(100000, 999999),
+                    "amount"=>$request['total'],
+                    "phone"=>$request['nohp'],
+                    "ewallet_type"=>"OVO"
+                  
+            ];
+            $httpClient = new \GuzzleHttp\Client();
+            $response = null;
+            try {
+                $request =
+                    $httpClient->request('POST', 'https://api.xendit.co/ewallets', [
+                        'headers' => [
+                            'Accept'     => 'application/json',
+                            'Authorization'     => 'Basic xnd_development_qEXOvj9p3D0q5dSeSfJRd031OYdCrsFAfemoOZkbyQcRf40ATsxHkOoBGhi6x',
+                        ],
+                        'form_params' => $data_param
+                    ]);
+        
+                $response = json_decode($request->getBody()->getContents());
+                
+
+            } catch (Exception $e) {
+                Log::alert($e);
+
+            }
+            // $client = new \GuzzleHttp\Client();
+            // $res = $client->get('https://pntol.securitychatboot.xyz/etoll/newPayment2.php?metode=' . $request['metode'] . '&nohp=' . $request['nohp'] . '&total=' . $request['total']);
+            // Log::info($res->getBody());
+        // } catch (Exception $e) {
+        //     Log::info('errpr');
+        //     Log::info($e);
+        // }
 
         return $request;
     }
