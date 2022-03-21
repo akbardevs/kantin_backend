@@ -50,20 +50,20 @@ Route::middleware(['basicAuth'])->group(function () {
 	Route::get("/product/{id}", [ProductController::class, 'index']);
 	Route::Post("/product/pay", [ProductController::class, 'pay']);
 });
-Route::get("/image/{filename}", [ProductController::class, 'image']);
-// Route::get('image/{filename}', function ($filename) {
-// 	if (File::exists(storage_path('app/public/' . $filename))) {
-// 		$path = storage_path('app/public/' . $filename);
-// 		$file = File::get($path);
-// 		$type = File::mimeType($path);
+// Route::get("/image/{filename}", [ProductController::class, 'image']);
+Route::get('image/{filename}', function ($filename) {
+	if (File::exists(storage_path('app/public/' . $filename))) {
+		$path = storage_path('app/public/' . $filename);
+		$file = File::get($path);
+		$type = File::mimeType($path);
 
-// 		$response = Response::make($file, 200);
-// 		$response->header("Content-Type", $type);
+		$response = Response::make($file, 200);
+		$response->header("Content-Type", $type);
 
-// 		// return $response;
-// 		return $response;
-// 	}
-// });
+		// return $response;
+		return $response;
+	}
+});
 // Route::get('/tes', function () {
 // 	return 'asdasd';
 // 	// return new StreamHandler(storage_path('logs/mylogs.log'));
