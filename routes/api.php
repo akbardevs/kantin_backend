@@ -43,6 +43,8 @@ Route::get("/connect", [UserController::class, 'testDB']);
 Route::get("list/logs", [UserController::class, 'listStorage']);
 Route::get("/clear/logs", [UserController::class, 'clearLog']);
 
+Route::get("/testing/fun", [UserController::class, 'testingaja']);
+
 Route::post("/testingcallback", [ProductController::class, 'testingcallback']);
 Route::middleware(['basicAuth'])->group(function () {
 	Route::get("/kantin/list", [KasirController::class, 'list']);
