@@ -51,7 +51,7 @@ class Products extends Resource
             Number::make('harga', 'harga')
                 ->sortable()
                 ->rules('required'),
-            // Image::make(__('Foto'), 'foto')->disk('public')
+            Image::make(__('Foto'), 'foto')->disk('public')
         ];
     }
 
