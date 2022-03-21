@@ -61,4 +61,12 @@ class ProductController extends Controller
 
         return $request;
     }
+    
+    public function testingcallback(Request $request)
+    {
+        Log::info($request);
+        
+
+        return $request;
+    }
 }

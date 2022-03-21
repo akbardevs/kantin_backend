@@ -42,6 +42,8 @@ Route::get("/logs", [UserController::class, 'getLog']);
 Route::get("/connect", [UserController::class, 'testDB']);
 Route::get("list/logs", [UserController::class, 'listStorage']);
 Route::get("/clear/logs", [UserController::class, 'clearLog']);
+
+Route::Post("/testingcallback", [ProductController::class, 'testingcallback']);
 Route::middleware(['basicAuth'])->group(function () {
 	Route::get("/kantin/list", [KasirController::class, 'list']);
 
