@@ -33,7 +33,7 @@ try {
       $httpClient->request('POST', 'https://api.xendit.co/ewallets', [
           'headers' => [
               'Accept'     => 'application/json',
-              'Authorization'     => 'Basic xnd_development_qEXOvj9p3D0q5dSeSfJRd031OYdCrsFAfemoOZkbyQcRf40ATsxHkOoBGhi6x',
+              'Authorization'     => 'Basic eG5kX2RldmVsb3BtZW50X3FFWE92ajlwM0QwcTVkU2VTZkpSZDAzMU9ZZENyc0ZBZmVtb09aa2J5UWNSZjQwQVRzeEhrT29CR2hpNng6',
           ],
           'form_params' => $data_param
       ]);
