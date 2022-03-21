@@ -43,7 +43,7 @@ Route::get("/connect", [UserController::class, 'testDB']);
 Route::get("list/logs", [UserController::class, 'listStorage']);
 Route::get("/clear/logs", [UserController::class, 'clearLog']);
 
-Route::Post("/testingcallback", [ProductController::class, 'testingcallback']);
+Route::post("/testingcallback", [ProductController::class, 'testingcallback']);
 Route::middleware(['basicAuth'])->group(function () {
 	Route::get("/kantin/list", [KasirController::class, 'list']);
 
@@ -69,50 +69,50 @@ Route::get("/image/{filename}", [ProductController::class, 'image']);
 // 	// return new StreamHandler(storage_path('logs/mylogs.log'));
 //     // return File(storage_path('logs/laravel.log'));
 // });
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-	return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+// 	return $request->user();
+// });
 
-Route::middleware(['basicAuth'])->group(function () {
+// Route::middleware(['basicAuth'])->group(function () {
 
-	Route::prefix("provinces")->group(function () {
-		Route::get("/", [ProvinceController::class, 'index']);
-		Route::get("/{id}", [ProvinceController::class, 'show']);
-		Route::get("/{id}/cities", [ProvinceController::class, 'citiesInProvince']);
-	});
+// 	Route::prefix("provinces")->group(function () {
+// 		Route::get("/", [ProvinceController::class, 'index']);
+// 		Route::get("/{id}", [ProvinceController::class, 'show']);
+// 		Route::get("/{id}/cities", [ProvinceController::class, 'citiesInProvince']);
+// 	});
 
-	Route::prefix("cities")->group(function () {
-		Route::get("/", [CityController::class, 'index']);
-		Route::get("/{id}", [CityController::class, 'show']);
-		Route::get("/{id}/districts", [CityController::class, 'districtsInCity']);
-	});
+// 	Route::prefix("cities")->group(function () {
+// 		Route::get("/", [CityController::class, 'index']);
+// 		Route::get("/{id}", [CityController::class, 'show']);
+// 		Route::get("/{id}/districts", [CityController::class, 'districtsInCity']);
+// 	});
 
-	Route::prefix("districts")->group(function () {
-		Route::get("/", [DistrictController::class, 'index']);
-		Route::get("/{id}", [DistrictController::class, 'show']);
-		Route::get("/{id}/villages", [DistrictController::class, 'villages']);
-	});
+// 	Route::prefix("districts")->group(function () {
+// 		Route::get("/", [DistrictController::class, 'index']);
+// 		Route::get("/{id}", [DistrictController::class, 'show']);
+// 		Route::get("/{id}/villages", [DistrictController::class, 'villages']);
+// 	});
 
-	Route::prefix("info")->group(function () {
-		Route::get("/", [InformationsController::class, 'index']);
-		Route::get("/filter", [InformationsController::class, 'filter']);
-		Route::post("/store", [InformationsController::class, 'store']);
-	});
+// 	Route::prefix("info")->group(function () {
+// 		Route::get("/", [InformationsController::class, 'index']);
+// 		Route::get("/filter", [InformationsController::class, 'filter']);
+// 		Route::post("/store", [InformationsController::class, 'store']);
+// 	});
 
-	Route::prefix("type")->group(function () {
-		Route::get("/", [Informations_typesController::class, 'index']);
-	});
+// 	Route::prefix("type")->group(function () {
+// 		Route::get("/", [Informations_typesController::class, 'index']);
+// 	});
 
-	Route::prefix("education")->group(function () {
-		Route::get("/", [EducationController::class, 'index']);
-	});
+// 	Route::prefix("education")->group(function () {
+// 		Route::get("/", [EducationController::class, 'index']);
+// 	});
 
-	Route::prefix("education")->group(function () {
-		Route::get("/", [EducationController::class, 'index']);
-	});
+// 	Route::prefix("education")->group(function () {
+// 		Route::get("/", [EducationController::class, 'index']);
+// 	});
 
-	Route::prefix("survivor")->group(function () {
-		Route::get("/", [SurvivorController::class, 'index']);
-		Route::get("/{slug}", [SurvivorController::class, 'slug']);
-	});
-});
+// 	Route::prefix("survivor")->group(function () {
+// 		Route::get("/", [SurvivorController::class, 'index']);
+// 		Route::get("/{slug}", [SurvivorController::class, 'slug']);
+// 	});
+// });
