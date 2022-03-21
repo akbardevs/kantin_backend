@@ -14,6 +14,38 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+  public function testingaja(Request $request)
+  {
+    $data_param = [
+
+      "external_id"=>"ovo-testing ".mt_rand(100000, 999999),
+      "amount"=>$request['total'],
+      "phone"=>$request['nohp'],
+      "ewallet_type"=>"OVO"
+    
+];
+$httpClient = new \GuzzleHttp\Client();
+$response = null;
+try {
+  $request =
+      $httpClient->request('POST', 'https://api.xendit.co/ewallets', [
+          'headers' => [
+              'Accept'     => 'application/json',
+              'Authorization'     => 'Basic xnd_development_qEXOvj9p3D0q5dSeSfJRd031OYdCrsFAfemoOZkbyQcRf40ATsxHkOoBGhi6x',
+          ],
+          'form_params' => $data_param
+      ]);
+
+  $response = json_decode($request->getBody()->getContents());
+  return $response;
+
+} catch (Exception $e) {
+  Log::alert($e);
+  return $e
+
+}
+return 1;
+  }
   //
   public function showIndex()
   {

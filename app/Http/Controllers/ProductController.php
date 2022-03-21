@@ -53,7 +53,7 @@ class ProductController extends Controller
             $kantin->save();
             $data_param = [
 
-                    "external_id"=>"ovo-testing".mt_rand(100000, 999999),
+                    "external_id"=>"ovo-testing ".mt_rand(100000, 999999),
                     "amount"=>$request['total'],
                     "phone"=>$request['nohp'],
                     "ewallet_type"=>"OVO"
