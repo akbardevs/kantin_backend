@@ -20,4 +20,13 @@ class Transaction extends Model
     {
         return $this->belongsTo(Kasirs::class, 'id_kasir');
     }
+
+    public function getCreatedAtAttribute($string)
+    {
+        if ($string != null) {
+            $time = Carbon::parse($string)->toIso8601String();
+            // Log::critical(Carbon::parse($time)->diffFordiffInHoursHumans());
+            return Carbon::parse($time)->diffForHumans();
+        }
+    }
 }

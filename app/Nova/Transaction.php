@@ -43,6 +43,8 @@ class Transaction extends Resource
     public function fields(Request $request)
     {
         return [
+            ID::make()
+                ->sortable(),
             BelongsTo::make(__('Kasir'), 'kasir', 'App\Nova\Kasirs')->sortable(),
             Text::make('Nama', 'nama')
                 ->sortable()
@@ -71,6 +73,8 @@ class Transaction extends Resource
             Text::make('Akun', 'nohp')
                 ->sortable()
                 ->rules('required'),
+                DateTime::make('Tanggal Pembelian')
+                ->hideFromIndex(),
         ];
     }
 
