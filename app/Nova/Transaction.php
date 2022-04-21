@@ -74,7 +74,7 @@ class Transaction extends Resource
             Text::make('Akun', 'nohp')
                 ->sortable()
                 ->rules('required'),
-                DateTime::make(__("Waktu Pembelian"), "updated_at"),
+                DateTime::make(__("Waktu Pembelian"), "created_at"),
         ];
     }
 
