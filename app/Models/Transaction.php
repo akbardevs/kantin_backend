@@ -16,6 +16,11 @@ class Transaction extends Model
         'metode',
         'total',
     ];
+
+    protected $dates = [
+        'created_at',
+    ];
+
     public function kasir()
     {
         return $this->belongsTo(Kasirs::class, 'id_kasir');
