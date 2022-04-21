@@ -74,7 +74,7 @@ class Transaction extends Resource
                 ->sortable()
                 ->rules('required'),
                 Text::make('Created At','created_at')
-                ->hideFromIndex(),
+                ->onlyOnIndex(),
         ];
     }
 
