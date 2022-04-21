@@ -73,7 +73,7 @@ class Transaction extends Resource
             Text::make('Akun', 'nohp')
                 ->sortable()
                 ->rules('required'),
-                DateTime::make('Tanggal Pembelian')
+                DateTime::make('Tanggal Pembelian','created_at')
                 ->hideFromIndex(),
         ];
     }
