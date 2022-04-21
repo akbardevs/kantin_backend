@@ -73,8 +73,8 @@ class Transaction extends Resource
             Text::make('Akun', 'nohp')
                 ->sortable()
                 ->rules('required'),
-                DateTime::make('Created At')
-                ->hideFromIndex(),
+                // DateTime::make('Created At')
+                // ->hideFromIndex(),
         ];
     }
 
